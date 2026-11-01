@@ -18,6 +18,10 @@ def about():
 def shop():
     return render_template('shop.html')
 
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
 if __name__ == '__main__':
     # debug=True: автоматичний перезапуск після змін у коді та детальні повідомлення про помилки.
     # Використовується лише під час розробки.

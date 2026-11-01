@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Часті запитання{% endblock %}
+
+{% block content %}
+
+<h1 class="text-3xl font-bold mb-4">Часті запитання</h1>
+
+<p class="text-lg text-gray-600 mb-8">
+    Тут ви знайдете відповіді на найпоширеніші запитання
+    про наш сайт.
+</p>
+
+<div class="max-w-3xl mx-auto space-y-4">
+
+    <details class="bg-white p-5 rounded-lg shadow-sm group">
+        <summary class="text-lg font-semibold cursor-pointer
+                        hover:text-blue-600">
+            Що це за сайт?
+        </summary>
+
+        <p class="mt-3 text-gray-600">
+            Це навчальний вебпроєкт, створений за допомогою
+            Python та Flask. Він містить декілька сторінок
+            з різноманітною інформацією та зображеннями.
+        </p>
+    </details>
+
+    <details class="bg-white p-5 rounded-lg shadow-sm group">
+        <summary class="text-lg font-semibold cursor-pointer
+                        hover:text-blue-600">
+            Що можна знайти в магазині?
+        </summary>
+
+        <p class="mt-3 text-gray-600">
+            У магазині представлені різноманітні персонажі
+            та зображення. Ви можете переглянути доступні
+            товари на відповідній сторінці.
+        </p>
+    </details>
+
+    <details class="bg-white p-5 rounded-lg shadow-sm group">
+        <summary class="text-lg font-semibold cursor-pointer
+                        hover:text-blue-600">
+            Чи можна придбати товари?
+        </summary>
+
+        <p class="mt-3 text-gray-600">
+            Наразі магазин має демонстраційний характер.
+            Функціонал справжніх покупок поки не реалізований.
+        </p>
+    </details>
+
+    <details class="bg-white p-5 rounded-lg shadow-sm group">
+        <summary class="text-lg font-semibold cursor-pointer
+                        hover:text-blue-600">
+            Як залишити відгук?
+        </summary>
+
+        <p class="mt-3 text-gray-600">
+            Ви можете скористатися сторінкою зворотного
+            зв'язку, щоб поділитися своєю думкою або
+            поставити запитання.
+        </p>
+    </details>
+
+    <details class="bg-white p-5 rounded-lg shadow-sm group">
+        <summary class="text-lg font-semibold cursor-pointer
+                        hover:text-blue-600">
+            Чи адаптований сайт для мобільних пристроїв?
+        </summary>
+
+        <p class="mt-3 text-gray-600">
+            Так, сайт використовує адаптивну верстку,
+            тому його можна переглядати як на комп'ютерах,
+            так і на смартфонах.
+        </p>
+    </details>
+
+</div>
+
+{% endblock %}
