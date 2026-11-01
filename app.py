@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -12,6 +11,9 @@ def home():
 def about():
     return render_template('about.html')
 
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
 
 if __name__ == '__main__':
     # debug=True: автоматичний перезапуск після змін у коді та детальні повідомлення про помилки.
