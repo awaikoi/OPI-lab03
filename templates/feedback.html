@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Зворотний зв'язок{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-4">Зворотний зв'язок</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+        <p class="text-lg mb-4">
+            Є питання, пропозиція чи помітили помилку? Напишіть нам: ми
+            читаємо кожне повідомлення і відповідаємо протягом двох робочих днів.
+        </p>
+        <p class="text-gray-600">
+            Якщо питання термінове, вкажіть це в темі повідомлення.
+        </p>
+    </div>
+
+    <form method="post" action="" class="space-y-4 bg-white p-6 rounded-lg shadow-md">
+        {% csrf_token %}
+
+        <div>
+            <label for="name" class="block text-sm font-medium mb-1">Ім'я</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+        </div>
+
+        <div>
+            <label for="email" class="block text-sm font-medium mb-1">Електронна пошта</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+        </div>
+
+        <div>
+            <label for="topic" class="block text-sm font-medium mb-1">Тема</label>
+            <select
+                id="topic"
+                name="topic"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+                <option value="question">Питання</option>
+                <option value="suggestion">Пропозиція</option>
+                <option value="bug">Повідомити про помилку</option>
+                <option value="other">Інше</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="message" class="block text-sm font-medium mb-1">Повідомлення</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="w-full bg-blue-600 text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+            Надіслати повідомлення
+        </button>
+    </form>
+</div>
+{% endblock %}
