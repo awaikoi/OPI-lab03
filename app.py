@@ -7,7 +7,7 @@ def home():
     return render_template('home.html')
 
 @app.route('/feedback')
-def home():
+def feedback():
     return render_template('feedback.html')
 
 @app.route('/about')
