@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Галерея{% endblock %}
+
+{% block content %}
+
+<h1 class="text-3xl font-bold mb-4">Наша галерея</h1>
+
+<p class="text-lg text-gray-600 mb-8">
+    Ласкаво просимо до нашої галереї!
+    Тут зібрані цікаві зображення та персонажі.
+</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    {% for image in images %}
+
+    <div class="bg-white rounded-lg shadow-md overflow-hidden
+                transition-transform duration-300 hover:scale-105">
+
+        <div class="h-64 flex items-center justify-center p-4">
+            <img
+                src="{{ image.src }}"
+                alt="{{ image.title }}"
+                class="max-w-full max-h-full object-contain"
+            />
+        </div>
+
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-2">
+                {{ image.title }}
+            </h2>
+
+            <p class="text-gray-600">
+                {{ image.description }}
+            </p>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
