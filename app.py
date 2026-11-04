@@ -22,6 +22,10 @@ def shop():
 def faq():
     return render_template('faq.html')
 
+@app.route('/delivery')
+def delivery():
+    return render_template('delivery.html')
+
 @app.route('/gallery')
 def gallery():
     images = [
